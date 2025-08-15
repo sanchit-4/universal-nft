@@ -83,6 +83,7 @@ Compile the on-chain Rust program to produce the deployable binary and the IDL (
 
 ```bash
 anchor build
+```
 
 The first build can take 15-20 minutes due to the patched dependencies. Subsequent builds will be much faster.
 
@@ -92,7 +93,7 @@ The project includes a comprehensive test suite in the `tests/` directory that v
 
 ```bash
 anchor test
-
+```
 🔗 Integration with ZetaChain localnet.sh
 
 This Solana program is designed to be the missing piece in the bounty's localnet.sh script. To integrate it, the following steps would be taken within that script's flow:
