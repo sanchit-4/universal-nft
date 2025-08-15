@@ -97,7 +97,7 @@ anchor test
 🔗 Integration with ZetaChain localnet.sh
 
 This Solana program is designed to be the missing piece in the bounty's localnet.sh script. To integrate it, the following steps would be taken within that script's flow:
-
+```
     Build and Deploy the Solana Program:
     After starting the ZetaChain localnet, you would build and deploy this Anchor project.
     code Bash
