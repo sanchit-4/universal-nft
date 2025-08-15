@@ -84,3 +84,39 @@ Compile the on-chain Rust program to produce the deployable binary and the IDL (
 ```bash
 anchor build
 
+The first build can take 15-20 minutes due to the patched dependencies. Subsequent builds will be much faster.
+
+### Run the Tests
+
+The project includes a comprehensive test suite in the `tests/` directory that verifies all on-chain functionality.
+
+```bash
+anchor test
+
+🔗 Integration with ZetaChain localnet.sh
+
+This Solana program is designed to be the missing piece in the bounty's localnet.sh script. To integrate it, the following steps would be taken within that script's flow:
+
+    Build and Deploy the Solana Program:
+    After starting the ZetaChain localnet, you would build and deploy this Anchor project.
+    code Bash
+
+    IGNORE_WHEN_COPYING_START
+    IGNORE_WHEN_COPYING_END
+
+        
+    # In the universal-nft directory
+    anchor build
+    anchor deploy --provider localnet
+
+      
+
+    You would capture the deployed Program ID.
+
+    Update the ZetaChain Universal NFT Contract:
+    A new function would be needed in the Hardhat tasks to call setConnectedContract on the ZetaChain universal NFT contract, providing it with the Solana program's ID and the chain ID for Solana.
+
+    Update the localnet.sh script:
+    The script would be modified to include the deployment and linking steps for Solana. The final transfer sequence would be: ZetaChain → Ethereum → BNB → Solana → ZetaChain.
+
+A conceptual update to localnet.sh would look like this:```bash
