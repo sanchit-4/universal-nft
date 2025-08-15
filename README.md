@@ -64,7 +64,7 @@ Ensure you have the following software installed:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [Your Repository URL]
+    git clone [[Your Repository URL]](https://github.com/sanchit-4/universal-nft/)
     cd universal-nft
     ```
 
